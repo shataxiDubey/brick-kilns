@@ -1547,7 +1547,399 @@
     </div>
   </section>
 
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Air pollution kills 7 million people annually. The brick kiln sector significantly contributes to economic
+              development but also accounts for 8-14% of air pollution in India. Policymakers have implemented
+              compliance measures to regulate brick kilns. Emission inventories are critical for air quality modeling
+              and source apportionment studies.
+
+              However, the largely unorganized nature of the brick kiln sector necessitates labor-intensive survey
+              efforts for monitoring. Recent efforts by air quality researchers have relied on manual annotation of
+              brick kilns using satellite imagery to build emission inventories, but this approach lacks scalability.
+              Machine-learning-based object detection methods have shown promise for detecting brick kilns; however,
+              previous studies often rely on costly high-resolution imagery and fail to integrate with governmental
+              policies.
+
+              In this work, we developed a scalable machine-learning pipeline that detected and classified 30,638 brick
+              kilns across five states in the Indo-Gangetic Plain using free, moderate-resolution satellite imagery from
+              Planet Labs. Our detections have a high correlation with on-ground surveys. We performed automated
+              compliance analysis based on government policies. In the Delhi airshed, stricter policy enforcement has
+              led to the adoption of efficient brick kiln technologies.
+
+              This study highlights the need for inclusive policies that balance environmental sustainability with the
+              livelihoods of workers.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+  <section class="section">
+    <div class="container">
+      <div class="content-wrapper">
+        <h2 class="title is-3 has-text-centered">Overview of All Tasks</h2>
+        <div class="overview">
+          <p>
+            In this study we use quarterly satellite imagery with a resolution of 4.77m from Planet Labs, we train YOLO
+            model to detect three brick klin variants : <b> i) Circular Fixed Chimney Bull’s
+              Trench Kiln (CFCBK); ii) Fixed Chimney Bull’s Tench Kiln (FCBK) and iii) Zigzag kilns </b> and apply thi
+            model across five Indo-Gnagetic states <b>
+              Uttar Pradesh, Bihar , West Bengal, Punjab and Haryana </b>with an area of over 520,000 km<sup>2</sup>. We
+            applied various big data resources for automated compliance monitoring, focusing on two types of compliance
+            rules: distance-based and technology-based.
+
+            <b>Our analysis of distance-based compliance, using OpenStreetMap data across 13 categories, revealed that
+              70% of brick kilns violate at least one rule.</b>
+
+            For technology-based compliance, we examined trends in brick kiln technologies over 12 years between 2017
+            and 2021 <b>
+              Our findings indicate that brick kilns contribute approximately 8% to PM<sub>2.5</sub> concentrations in
+              Delhi.
+
+              We determined that 30.66 million people live within 800 meters of brick kilns, violating central
+              government regulations.
+            </b>
+
+          </p>
+        </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <div class="task-grid">
+        <a href="#task1" class="task-box">
+          <img src="static/bk_images/study.svg" alt="Task 1 Icon" class="task-icon">
+          <span class="task-number"></span>
+          <span class="task-description">Background Study</span>
+        </a>
+        <a href="#task2" class="task-box">
+          <img src="static/bk_images/big-data.png" alt="Task 2 Icon" class="task-icon">
+          <span class="task-number"></span>
+          <span class="task-description">Big Data Resources</span>
+        </a>
+        <a href="#task3" class="task-box">
+          <img src="static/bk_images/brick.svg" alt="Task 3 Icon" class="task-icon">
+          <span class="task-number"></span>
+          <span class="task-description">Brick Kiln Dataset</span>
+        </a>
+       <a href="#task4" class="task-box">
+          <img src="static/bk_images/compliance.svg" alt="Task 4 Icon" class="task-icon">
+          <span class="task-number"></span>
+          <span class="task-description">Automatic Compliance Monitoring</span>
+        </a>
+        <a href="#task5" class="task-box">
+          <img src="static/bk_images/air pollution.svg" alt="Task 5 Icon" class="task-icon">
+          <span class="task-number"></span>
+          <span class="task-description">Air Pollution and Health Effects</span>
+        </a>
+        <a href="#task6" class="task-box">
+          <img src="static/bk_images/conclusion.svg" alt="Task 6 Icon" class="task-icon">
+          <span class="task-number"></span>
+          <span class="task-description">Conclusion</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </section>
+
   <!-- TASK 1 Begins -->
+  <section id="task1" class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2">Background Study <img src="static/bk_images/study.svg" alt="Background Study"
+          class="task-icon"></h2>
+
+      <div class="content">
+        <h3>Brick Kilns</h3>
+<p>A brick kiln is a facility where bricks are produced through shaping, drying, firing, and cooling processes. The brick-making process involves four main steps: shaping, drying, firing, and exporting. Brick kilns are often located near rivers due to the availability of suitable soil.</p>
+
+<h3>Continuous Fire Brick Kilns</h3>
+<p>Brick kilns are classified into batch production kilns and continuous fire kilns. Continuous fire kilns are more energy-efficient as they reuse warm air from the combustion zone to dry unfired bricks. In India, approximately 75% of bricks are produced by continuous fire kilns, with FCBK and Zigzag kilns being the most common types.</p>
+
+<h3>Brick Kilns and Sustainability</h3>
+<h4>Air Pollution</h4>
+<p>In 2017, India's total brick production was estimated at 233±15 billion bricks, consuming 990±125 PJ yr⁻¹ of energy. Brick kilns contribute an estimated 8-14% of India's air pollution. Advanced technologies, such as Zigzag kilns, reduce PM and CO emissions by approximately 60-70%.</p>
+
+<h4>United Nations Sustainable Development Goals</h4>
+<p>Brick production relies heavily on labor, employing approximately 15 million workers in India. This raises concerns related to forced labor, modern slavery, and human trafficking, which are addressed by UN Sustainable Development Goal (SDG) 8.7. Our research intersects with several SDGs, including addressing premature deaths from air pollution (SDG 3.4 & 3.9), mitigating CO₂ emissions (SDG 9.4), monitoring PM2.5 and PM10 emissions (SDG 11.6), reducing fossil-fuel subsidies (SDG 12.c), and tracking greenhouse gas emissions (SDG 13.2).</p>
+
+<h3>Government Policies</h3>
+<p>The National Clean Air Program (NCAP), launched in 2019, aims to reduce air pollution levels to comply with National Ambient Air Quality Standards (NAAQS). The Environment (Protection) Amendment Rules, 2022, mandated the conversion of all brick kilns within 10 km of non-attainment cities to cleaner technologies by 2024. Brick kilns must be located at least 800 meters from residential areas and fruit orchards, and a minimum distance of 1 km must be maintained between two brick kilns.</p>
+
+<h3>Object Detection Models</h3>
+<p>Object detection involves identifying objects in an image by predicting their bounding boxes and classifying them into predefined categories. Oriented Bounding Boxes (OBBs) offer a more precise representation of object areas, especially for irregularly oriented objects. In the context of brick kilns, OBBs facilitate accurate spatial extent estimation, which is essential for assessing brick production capacity and calculating emission factors for air quality modeling.</p>
+
+        </div>
+  </section>
+  <!-- TASK 1 Ends -->
+
+  <hr>
+  <!-- TASK 2 Begins -->
+  <section id="task2" class="section">
+    <div class="container is-max-desktop">
+
+      <h2 class="title is-2">Big Data Resoruces <img src="static/bk_images/big-data.png" alt="Big Data resouces "
+          class="task-icon"></h2>
+
+
+
+      <div class="content">
+        <p>
+
+
+        </p>
+
+        <h3 class="title is-4"> Satellite Imagery</h3>
+        <p>
+          Selecting suitable satellite imagery requires balancing cost and computational efficiency. High-resolution
+          commercial imagery, such as Maxar (30-50 cm) and Airbus products, offers detailed views but is often too
+          expensive for research.
+          Brick kilns, on average, cover 150 meters in latitude and longitude and thus span approximately 15 × 15 pixels
+          in Sentinel-2 imagery. Hence we utilized freely available moderate-resolution imagery (4.77 meters) under a
+          research license
+        <ol>
+          <li><b> 3.1.1 Planet Labs</b></li>
+          <p>We utilize satellite imagery from Planet Labs in this work . Our study area spans five Indian states,
+            covering over 520,000 km² (15.8% of India). The large 4096 × 4096 sized images are divided into overlapping
+            640 × 640 sized crops with a 64-pixel overlap (≈300 meters), ensuring that brick kilns do not get cut at the
+            image edges. We selected imagery from the first quarter of 2024.
+            We annotated high-resolution imagery and transferred the labels to Planet imagery, as detailed in the next
+            section.</p>
+
+          <li><b> 3.1.2 Esri Wayback Imagery </li></b>
+          <p>Esri, a leading provider of GIS technology delivers high-resolution basemaps (up to 30 cm) through a Web
+            Map Service (WMS).
+
+            We utilized Esri imagery from February 8, 2024, to align with the first-quarter Planet mosaic of 2024.
+          </p>
+        </ol>
+
+        <h3 class="title is-4">OpenStreetMap</h3>
+        <div class="content">
+          <p>
+
+
+            OpenStreetMap (OSM), a community-driven initiative, offers a vast array of geographic datasets contributed
+            by volunteers globally. Using the Geofabrik platform, we extracted geometry data for features such as
+            railway tracks, highways, rivers, schools, and habitation then utilize this data for distance-based
+            compliance monitoring.
+          </p>
+        </div>
+       
+        <table>
+        <caption> <b>Table 1</b> Datasets extracted from OpenStreetMap and filters applied to extract them</caption>
+          <thead>
+            <tr>
+              <th>Shapefile</th>
+              <th>Data</th>
+              <th>Filters</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>gis_osm_landuse_a_free_1.shp</td>
+              <td>Habitation</td>
+              <td>fclass="residential"</td>
+            </tr>
+            <tr>
+              <td>gis_osm_landuse_a_free_1.shp</td>
+              <td>Orchards</td>
+              <td>fclass="orchard"</td>
+            </tr>
+            <tr>
+              <td>gis_osm_landuse_a_free_1.shp</td>
+              <td>Nature reserves</td>
+              <td>fclass="nature_reserve"</td>
+            </tr>
+            <tr>
+              <td>gis_osm_buildings_a_free_1.shp</td>
+              <td>Schools</td>
+              <td>type="school"</td>
+            </tr>
+            <tr>
+              <td>gis_osm_buildings_a_free_1.shp</td>
+              <td>Hospitals</td>
+              <td>type="hospital"</td>
+            </tr>
+            <tr>
+              <td>gis_osm_buildings_a_free_1.shp</td>
+              <td>Religious places</td>
+              <td>type="temple" or "mosque" or "church"</td>
+            </tr>
+            <tr>
+              <td>gis_osm_roads_free_1.shp</td>
+              <td>National & Express highways</td>
+              <td>ref starts with "NH" or "NE"</td>
+            </tr>
+            <tr>
+              <td>gis_osm_roads_free_1.shp</td>
+              <td>State highways</td>
+              <td>ref starts with "SH"</td>
+            </tr>
+            <tr>
+              <td>gis_osm_roads_free_1.shp</td>
+              <td>District highways</td>
+              <td>ref starts with "MDR"</td>
+            </tr>
+            <tr>
+              <td>gis_osm_water_a_free_1.shp</td>
+              <td>Wetland</td>
+              <td>fclass="wetland"</td>
+            </tr>
+            <tr>
+              <td>gis_osm_waterways_free_1.shp</td>
+              <td>Rivers</td>
+              <td>fclass="river"</td>
+            </tr>
+            <tr>
+              <td>gis_osm_railways_free_1.shp</td>
+              <td>Railway tracks</td>
+              <td>No filter</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 class="title is-4">Government Data</h3>
+        <div class="content">
+          <p>
+            We obtained geolocation data for 165,000 hospitals and nursing homes from the Indian Government’s data portal. This dataset supports distance-based compliance monitoring of brick kilns.
+          </p>
+        </div>
+        <h3 class="title is-4">Population Data</h3>
+        <div class="content">
+          <p>
+            We used the LandScan 2023 global population dataset, produced by Oak Ridge National Laboratory, at a resolution of 0.0083 degrees.  We utilize this dataset to analyze population exposure due to brick kilns’ air pollution.
+          </p>
+        </div>
+        </div>
+      </div>
+  </section>
+  <!-- TASK 2 Ends -->
+
+          <hr>
+          <!-- TASK 3 Begins -->
+          <section id="task3" class="section">
+            <div class="container is-max-desktop">
+
+              <h2 class="title is-2">Brick Kiln Dataset <img src="static/bk_images/brick.svg" alt="brick kiln dataset"
+                  class="task-icon"></h2>
+
+
+
+              <div class="content">
+                <body>
+                  <h3>Initial Data Preparation</h3>
+                  <p>An initial labeled dataset is required to train the object detection models. We select the regions for initial labeling with the following criteria:</p>
+                  <ul>
+                      <li>i) highly polluted;</li>
+                      <li>ii) highly populated (highly impacted by brick kilns);</li>
+                      <li>iii) high likelihood of kilns (as suggested by an air quality expert); and</li>
+                      <li>iv) non-attainment cities.</li>
+                  </ul>
+                  <h4>(1) Delhi Airshed, India</h4>
+                  <p>Delhi, India’s capital, is highly populated and consistently ranks among the world’s most polluted cities. While no brick kilns are located within Delhi due to strict regulations, the surrounding region has a dense concentration of kilns. We selected an 80×80 grid over Delhi with a 0.01-degree resolution, as defined by Guttikunda.</p>
+                  <h4>(2) Lucknow Airshed, Uttar Pradesh, India</h4>
+                  <p>Lucknow, the capital of Uttar Pradesh (India’s most populous state), is classified as a non-attainment city under NCAP. A 60×60 airshed grid with 0.01-degree resolution was chosen for annotation, following the definition by Guttikunda. </p>
+                  <h4>(3) West Bengal Small Airshed, West Bengal</h4>
+                  <p>A small airshed near the Haldi River in West Bengal was selected due to the high density of brick kilns in the area. A 639 km<sup>2</sup> region surrounding the identified kilns was annotated. </p>
+                  <h4>(4) Ahmedabad Buffer Region</h4>
+                  <p>Ahmedabad, a non-attainment city, was studied in collaboration with the Gujarat Pollution Control Board (GPCB). Following the Environment (Protection) Amendment Rules, 2022, we geo-located brick kilns within a 10 km buffer of Ahmedabad city.</p>
+                  <p>Across these four regions, we manually scanned over 15,018 km<sup>2</sup> area and identified 1,621 brick kilns, completing the annotations in 125 hours.</p>
+                  <table>
+                    <caption><b>Table 2</b> Statistics of initial dataset</caption>
+                    <thead>
+                        <tr>
+                            <th>Airshed</th>
+                            <th>Area (km<sup>2</sup>)</th>
+                            <th>CFCBK</th>
+                            <th>FCBK</th>
+                            <th>Zigzag</th>
+                            <th>Total Kilns</th>
+                            <th>Annotation time (hours)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Delhi Airshed</td>
+                            <td>6937</td>
+                            <td>2</td>
+                            <td>35</td>
+                            <td>746</td>
+                            <td>783</td>
+                            <td>58</td>
+                        </tr>
+                        <tr>
+                            <td>Lucknow Airshed</td>
+                            <td>3962</td>
+                            <td>26</td>
+                            <td>225</td>
+                            <td>241</td>
+                            <td>492</td>
+                            <td>33</td>
+                        </tr>
+                        <tr>
+                            <td>West Bengal Small</td>
+                            <td>639</td>
+                            <td>0</td>
+                            <td>89</td>
+                            <td>110</td>
+                            <td>199</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Ahmedabad 10 km buffer</td>
+                            <td>3480</td>
+                            <td>38</td>
+                            <td>108</td>
+                            <td>1</td>
+                            <td>147</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>15018</td>
+                            <td>66</td>
+                            <td>457</td>
+                            <td>1098</td>
+                            <td>1621</td>
+                            <td>125</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                </body>
+                <h3>
+                  Annotation Process 
+                </h3>
+                <p>The annotation process involves labeling brick kilns with oriented bounding boxes (OBBs) and assigning a category to represent the kiln's technology. A custom labeling interface using Leafmap was developed, utilizing the Esri Wayback Satellite Imagery WMS layer. The region of interest was divided into a 1 km<sup>2</sup> grid, and each grid cell was manually inspected. OBBs were drawn around the identified kilns, and the labeled data were overlaid onto cropped, geo-referenced Planet images. This process ensured accurate and undistorted annotations during reprojection from Esri to Planet imagery.</p>
+                <div>               
+                  <div>
+                    <h6>Figure 2: Illustration of the labeling process</h6>
+                    <div>
+                        <img src="static/bk_images/labeling_grid.png" alt="Grid for annotation" style="width: 45%; margin-right: 5%;">
+                        <img src="static/bk_images/labeling_kiln.png" alt="Labeling a kiln" style="width: 45%;">
+                    </div>
+                    <p>(a) Grid for annotation (b) Labeling a kiln</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- TASK 3 Ends -->
+         
+  <hr>
+
   <section id="task1" class="section">
     <div class="container is-max-desktop">
       <h2 class="title is-2">Model Selection</h2>
